@@ -11,6 +11,6 @@ namespace Domain.Interfaces
         Task<IEnumerable<Modulo>> GetAll();
         Task Create(Modulo modulo);
         Task Update(Modulo modulo);
-        Task Delete(Guid id)
+        Task Delete(Guid id);
     }
 }
