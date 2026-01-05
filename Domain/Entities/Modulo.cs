@@ -10,10 +10,10 @@ namespace Domain.Entities
         public string Nombre { get; set; } = string.Empty;
         public DateTime FechaInicio { get; set; }
         public DateTime FechaFin { get; set; }
-        public int DiplomadoId { get; set; }
+        public Guid DiplomadoId { get; set; }
         public Diplomado? Diplomado { get; set; }
 
-        public int DocenteId { get; set; }
+        public Guid DocenteId { get; set; }
         public Docente? Docente { get; set; }
         public ICollection<Nota> Notas { get; set; } = new List<Nota>();
     }

@@ -8,10 +8,10 @@ namespace Domain.Entities
     {
         public Guid Id { get; set; }
         public decimal Valor { get; set; }
-        public int InscripcionId { get; set; }
+        public Guid InscripcionId { get; set; }
         public Inscripcion? Inscripcion { get; set; }
 
-        public int ModuloId { get; set; }
+        public Guid ModuloId { get; set; }
         public Modulo? Modulo { get; set; }
     }
 }
