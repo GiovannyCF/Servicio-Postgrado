@@ -136,13 +136,13 @@ namespace Infraestructure.Migrations
                         column: x => x.InscripcionId,
                         principalTable: "Inscripciones",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Notas_Modulos_ModuloId",
                         column: x => x.ModuloId,
                         principalTable: "Modulos",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateIndex(

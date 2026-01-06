@@ -23,7 +23,7 @@ namespace Infrastructure.Repositories
         }
 
         public async Task<Estudiante> GetById(Guid id)
-        {
+        {   
             return await _context.Estudiantes.FindAsync(id);
         }
 

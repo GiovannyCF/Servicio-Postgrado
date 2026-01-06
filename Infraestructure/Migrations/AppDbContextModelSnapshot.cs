@@ -254,15 +254,15 @@ namespace Infraestructure.Migrations
             modelBuilder.Entity("Domain.Entities.Nota", b =>
                 {
                     b.HasOne("Domain.Entities.Inscripcion", "Inscripcion")
-                        .WithMany("Notas")
+                        .WithMany()
                         .HasForeignKey("InscripcionId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.Entities.Modulo", "Modulo")
-                        .WithMany("Notas")
+                        .WithMany()
                         .HasForeignKey("ModuloId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.Navigation("Inscripcion");
@@ -285,16 +285,6 @@ namespace Infraestructure.Migrations
             modelBuilder.Entity("Domain.Entities.Estudiante", b =>
                 {
                     b.Navigation("Inscripciones");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Inscripcion", b =>
-                {
-                    b.Navigation("Notas");
-                });
-
-            modelBuilder.Entity("Domain.Entities.Modulo", b =>
-                {
-                    b.Navigation("Notas");
                 });
 #pragma warning restore 612, 618
         }
