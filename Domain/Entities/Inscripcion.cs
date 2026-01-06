@@ -14,6 +14,5 @@ namespace Domain.Entities
         public Estudiante? Estudiante { get; set; }
         public Guid DiplomadoId { get; set; }
         public Diplomado? Diplomado { get; set; }
-        public ICollection<Nota> Notas { get; set; } = new List<Nota>();
     }
 }
